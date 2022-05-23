@@ -1,2 +1,2 @@
-# cbc.github.io
+# CBC
 Homepage for Cohort Based Courses
