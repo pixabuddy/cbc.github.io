@@ -215,8 +215,13 @@ section {
 		font-size: 3.5rem;
 		text-align: center;
 
+		@include respond(tab-port) {
+			font-size: 40px;
+		}
+
 		@include respond(phone) {
-			font-size: 48px;
+			font-size: 45px;
+			margin-top: 10px;
 		}
 
 		span {
@@ -232,9 +237,13 @@ section {
 		justify-content: center;
 		margin-top: 3rem;
 
+		@include respond(tab-port) {
+			margin-top: 1rem;
+		}
+
 		@include respond(phone) {
 			flex-direction: column;
-			margin-top: 2rem;
+			margin-top: 1.5rem;
 		}
 
 		&__users {
@@ -244,6 +253,10 @@ section {
 			img {
 				width: auto;
 				height: 50px;
+
+				@include respond(tab-port) {
+					height: 44px;
+				}
 			}
 		}
 
@@ -267,8 +280,13 @@ section {
 			color: $color-dark;
 			margin-bottom: 0;
 
+			@include respond(tab-port) {
+				font-size: 16px;
+				line-height: 21px;
+			}
+
 			@include respond(phone) {
-				margin-top: 22px;
+				margin-top: 18px;
 			}
 		}
 	}
@@ -279,6 +297,11 @@ section {
 		left: 0;
 		top: 0;
 
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column;
+		}
+
 		&__left,
 		&__right {
 			width: 250px;
@@ -286,48 +309,206 @@ section {
 			position: absolute;
 			top: 40px;
 
-			img {
+			@include respond(phone) {
 				width: 100%;
-				height: auto;
+			}
+
+			&-1 {
+				width: 55px;
+				height: 55px;
+			}
+
+			&-2 {
+				width: 71px;
+				height: 71px;
+			}
+
+			&-3 {
+				width: 62px;
+				height: 62px;
+			}
+
+			&-4 {
+				width: 58px;
+				height: 58px;
+			}
+
+			&-1,
+			&-4 {
+				@include respond(tab-port) {
+					width: 38px;
+					height: 38px;
+				}
+
+				@include respond(phone) {
+					width: 44px;
+					height: 44px;
+				}
+			}
+
+			&-2,
+			&-3 {
+				@include respond(tab-port) {
+					width: 47px;
+					height: 47px;
+				}
+
+				@include respond(phone) {
+					width: 55px;
+					height: 55px;
+				}
+			}
+
+			&-1,
+			&-2,
+			&-3,
+			&-4 {
+				position: absolute;
+
+				img {
+					width: 100%;
+					height: auto;
+					filter: drop-shadow(0px 9px 19px rgba(0, 0, 0, 0.06));
+				}
 			}
 		}
 
 		&__left {
 			left: 5.5rem;
+
+			@include respond(phone) {
+				left: 0;
+			}
+
+			&-1 {
+				left: 8.5rem;
+				animation: float 2.4s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					left: 1.5rem;
+				}
+
+				@include respond(phone) {
+					left: 3rem;
+				}
+			}
+
+			&-2 {
+				left: 0rem;
+				top: 6rem;
+				animation: float 5s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					left: -3rem;
+				}
+
+				@include respond(phone) {
+					left: 6rem;
+					top: 4.5rem;
+				}
+			}
+
+			&-3 {
+				left: 11rem;
+				top: 10rem;
+				animation: float 3s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					left: 1.5rem;
+				}
+
+				@include respond(phone) {
+					left: 16rem;
+					top: 4.5rem;
+				}
+			}
+
+			&-4 {
+				left: 4rem;
+				top: 17rem;
+				animation: float 1.8s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					left: -2rem;
+					top: 15rem;
+				}
+
+				@include respond(phone) {
+					left: auto;
+					right: 3rem;
+					top: 0rem;
+				}
+			}
 		}
 
 		&__right {
 			right: 5.5rem;
-		}
-	}
 
-	&-brands_mbl {
-		width: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-
-		&__left,
-		&__right {
-			width: 328px;
-			height: auto;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-
-			img {
-				width: 100%;
-				height: auto;
+			@include respond(phone) {
+				right: 0;
 			}
-		}
 
-		&__left {
-			top: 6rem;
-		}
+			&-1 {
+				right: 8.5rem;
+				animation: float 1.5s ease-in-out infinite alternate;
 
-		&__right {
-			top: 38rem;
+				@include respond(tab-port) {
+					right: 1.5rem;
+				}
+
+				@include respond(phone) {
+					right: auto;
+					left: 3rem;
+					top: 36rem;
+				}
+			}
+
+			&-2 {
+				right: 0rem;
+				top: 6rem;
+				animation: float 5s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					right: -3rem;
+				}
+
+				@include respond(phone) {
+					right: auto;
+					left: 6rem;
+					top: 31rem;
+				}
+			}
+
+			&-3 {
+				right: 11rem;
+				top: 10rem;
+				animation: float 3.5s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					right: 1.5rem;
+				}
+
+				@include respond(phone) {
+					right: 6rem;
+					top: 31rem;
+				}
+			}
+
+			&-4 {
+				right: 4rem;
+				top: 17rem;
+				animation: float 2.5s ease-in-out infinite alternate;
+
+				@include respond(tab-port) {
+					right: -2rem;
+					top: 15rem;
+				}
+
+				@include respond(phone) {
+					right: 3rem;
+					top: 36rem;
+				}
+			}
 		}
 	}
 }
@@ -355,9 +536,9 @@ section {
 		padding: 8px 20px;
 		transition: 0.3s all;
 
-		@include respond(phone) {
-			font-size: 18px;
-			padding: 8px 16px;
+		@include respond(tab-port) {
+			font-size: 16px;
+			padding: 6px 14px;
 		}
 
 		&:hover {
@@ -412,7 +593,7 @@ section {
 			filter: drop-shadow(0px 4px 15px rgba(234, 225, 208, 0.35));
 			overflow: hidden;
 
-			@include respond(phone) {
+			@include respond(tab-port) {
 				width: 80px;
 				height: 80px;
 			}
@@ -432,7 +613,7 @@ section {
 			font-weight: 500;
 			font-size: 18px;
 
-			@include respond(phone) {
+			@include respond(tab-port) {
 				font-size: 16px;
 				padding: 5px 14px;
 			}
@@ -444,7 +625,7 @@ section {
 		font-size: 24px;
 		color: $color-dark;
 
-		@include respond(phone) {
+		@include respond(tab-port) {
 			font-size: 20px;
 		}
 	}
@@ -455,7 +636,7 @@ section {
 		color: $color-para;
 		margin: 20px 0 25px 0;
 
-		@include respond(phone) {
+		@include respond(tab-port) {
 			font-size: 15px;
 		}
 	}
@@ -467,6 +648,11 @@ section {
 			@extend .filter-controls_btn;
 			width: 100%;
 			font-size: 18px;
+
+			@include respond(tab-port) {
+				font-size: 16px;
+				padding: 8px 14px;
+			}
 		}
 	}
 }
@@ -490,5 +676,17 @@ section {
 
 	@include respond(phone) {
 		display: none !important;
+	}
+}
+
+// Animations
+
+@keyframes float {
+	0% {
+		transform: translateY(10px) rotate3d(0, 0, 0, 0deg);
+	}
+
+	100% {
+		transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
 	}
 }
