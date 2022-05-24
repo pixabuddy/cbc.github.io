@@ -418,7 +418,8 @@ section {
 				}
 
 				@include respond(phone) {
-					left: 16rem;
+					left: auto;
+					right: 6rem;
 					top: 4.5rem;
 				}
 			}

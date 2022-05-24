@@ -390,7 +390,8 @@ section {
 
 @media only screen and (max-width: 600px) {
   .banner-brands__left-3 {
-    left: 16rem;
+    left: auto;
+    right: 6rem;
     top: 4.5rem;
   }
 }
